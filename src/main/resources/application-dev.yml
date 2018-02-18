@@ -1,0 +1,21 @@
+spring:
+  profiles: dev
+  main:
+    banner-mode: "off"
+    
+cloud: 
+  aws:
+    stack:
+      auto : false
+    region:
+      static: eu-west-1
+    
+queue: 
+  queueName: https://localhost/sqsname
+
+logging:
+  level:
+    org.springframework.web: ERROR
+    com.springboot: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
